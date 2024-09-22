@@ -6,4 +6,4 @@ const userController = require('../controllers/userController')
 
 router.post('/register', signUpValidation, userController.register)
 
-module.exports = routeer;
+module.exports = router;
