@@ -49,6 +49,21 @@ const register = (req, res) => {
     )
 }
 
+const all = (req, res) => {
+    db.query(
+        `SELECT * FROM users`,
+        (err, result) => {
+            if (result && resukt.lentgh) {
+                return res.status(200).send({
+                    msg: 'Voici la liste des users!',
+                    users : result.array()
+                })
+            }
+        }
+    )
+}
+
 module.exports = {
-    register
+    register,
+    all
 }

@@ -5,5 +5,6 @@ const { signUpValidation } = require('../helpers/validation')
 const userController = require('../controllers/userController')
 
 router.post('/register', signUpValidation, userController.register)
+router.get('/users',userController.all)
 
 module.exports = router;
